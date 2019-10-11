@@ -124,7 +124,7 @@ function success(stream)
     setTimeout(captureToCanvas, 500);
 }
 
-function error(error)
+function _error(error)
 {
     gUM=false;
     return;
@@ -199,7 +199,7 @@ function setwebcam2(options)
             then(function(stream){
                 success(stream);
             }).catch(function(error){
-                error(error)
+                _error(error)
             });
     }
     else
