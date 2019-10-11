@@ -107,7 +107,7 @@ function read(a)
     if(a.indexOf("http://") === 0 || a.indexOf("https://") === 0)
         html+="<a target='_blank' href='"+a+"'>"+a+"</a><br>";
     html += htmlEntities(a);
-    document.getElementById("result").text = html;
+    document.getElementById("result").text(html);
 }
 
 function isCanvasSupported(){
@@ -182,11 +182,11 @@ function setwebcam()
 function setwebcam2(options)
 {
 	console.log(options);
-	document.getElementById("result").text="";
+	document.getElementById("result").text("test");
     if(stype==1)
     {
         setTimeout(captureToCanvas, 500);
-        return;
+        return;R
     }
     var n=navigator;
     document.getElementById("outdiv").innerHTML = vidhtml;
@@ -224,7 +224,7 @@ function setwebcam2(options)
 
 function setimg()
 {
-	document.getElementById("result").text="";
+	document.getElementById("result").text("test");
     if(stype==2)
         return;
     document.getElementById("outdiv").innerHTML = imghtml;
